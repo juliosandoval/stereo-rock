@@ -1,0 +1,88 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: pier-sans-light;
+	src: url(../fonts/pier-sans-light.otf);
+}
+
+@font-face {
+	font-family: pier-sans-boldt;
+	src: url(../fonts/pier-sans-bold.otf);
+}
+
+body {
+	background-color: rgb(38, 38, 38);
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000;
+	margin: auto;
+	/*flex*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+header {
+	width: 92%;
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	vertical-align: bottom;
+	color: white;
+	font-family: pier-sans-bold;
+	font-size: 40;
+}
+
+.subtitulo {
+	width: 100%;
+	padding-bottom: 20px;
+	display: flex;
+	color: white;
+	justify-content: center;
+	font-family: pier-sans-light;
+	font-size: 20;
+}
+
+.main {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.main div {
+	font-family: pier-sans-bold;
+	border-left: 1px solid rgb(157, 15, 56);
+	border-top: 1px solid rgb(157, 15, 56);
+	border-bottom: 5px solid rgb(157, 15, 56);
+	border-right: 5px solid rgb(157, 15, 56);
+	border-radius: 15px;
+	width: 150;
+	height: 150;
+	box-sizing: border-box;
+	display: inline-block;
+	background: white;
+	padding-top: 15px;
+	margin: 5px;
+	text-align: center;
+}
+
+.main div.informacion {
+	padding-top: 5px;
+}
+
+a {
+	color: black;
+}

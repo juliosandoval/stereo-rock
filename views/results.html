@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultados de la busqueda</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles_results.css" />
+    <script src="../js/search.js"></script>
+  </head>
+
+  <body>
+    <div class="searchSection">
+      <form class="search-form">
+        <input
+          class="searchText"
+          type="search"
+          name="searchText"
+          id="searchText"
+          placeholder="Buscar"
+          required
+        />
+        <select name="categ" class="selectBox" id="category">
+          <option value="empty">-Categor&iacute;a-</option>
+          <option value="artist">Artista</option>
+          <option value="album">Album</option>
+          <option value="band">Banda</option>
+          <option value="song">Canci&oacute;n</option>
+        </select>
+        <button type="submit" class="submit" onclick="Search(event)">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <div class="error-msg" id="error-msg">
+        <p>Error - Check your inputs</p>
+      </div>
+    </div>
+    <div class="results-container" id="results-container"></div>
+  </body>
+</html>
