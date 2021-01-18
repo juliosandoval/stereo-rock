@@ -103,6 +103,22 @@ body {
 	font-size: 20px;
 }
 
+.btn_edit, .btn_delete{
+	padding: 5px;
+	background-color: rgb(157, 15, 16);
+	width: 100px;
+	margin-top: 5px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	border-radius: 5px;
+}
+
+.btn_delete{
+	background-color: black;
+}
+
 @media (max-width: 480px) {
 	.search-form{
 		flex-direction: column;

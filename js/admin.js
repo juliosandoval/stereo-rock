@@ -1,4 +1,12 @@
-function Search(event){
+function deleteSong(index, type, name_search, artist){
+    console.log("Index: "+index);
+    console.log("Type: "+type);
+    console.log("Name_search: "+ name_search);
+    console.log("Artist: "+ artist);
+}
+
+
+function searchAdmin(event){
 
     event.preventDefault();
     
@@ -16,7 +24,7 @@ function Search(event){
             }
             for(let result of results) {
                 var a_box = document.createElement('a');
-                a_box.setAttribute('href', '/show_info.html?key='+result.id+'&category='+result.type.toLowerCase());
+                a_box.setAttribute('href', '/show_info_admin.html?key='+result.id+'&category='+result.type.toLowerCase());
                 a_box.setAttribute('class', 'result-link');
                 
                 var div_cont = document.createElement('div');
@@ -35,8 +43,21 @@ function Search(event){
                 p_category.setAttribute('class', 'entry-description');
                 p_category.innerText= result.type;
 
+                var a_edit = document.createElement('a');
+                a_edit.setAttribute('href', '/edit_info_admin.html?key='+result.id+'&category='+result.type.toLowerCase());
+                a_edit.innerText = "Editar";
+                a_edit.setAttribute('class', 'btn_edit');
+
+                var btn_delete = document.createElement('a');
+                btn_delete.setAttribute('onclick', 'deleteSong('+result.id+',"'+result.type.toLowerCase()+'", "'+ result.name + ' ","'+result.artist+' ")');
+                btn_delete.setAttribute('href', '#');
+                btn_delete.innerText = "Eliminar";
+                btn_delete.setAttribute('class', 'btn_delete');
+
                 div_cont.appendChild(h2_name);
                 div_cont.appendChild(p_category);
+                div_cont.appendChild(a_edit);
+                div_cont.appendChild(btn_delete);
                 a_box.appendChild(div_cont);
                 results_container.appendChild(a_box);
             }
@@ -52,8 +73,8 @@ function Search(event){
         console.log("Checa tus datos");
         return;
     }
-    var path_get = "search" //Cambiar por la ruta donde haremos la peticion get
-    var requestdir = path_get +"?key="+searchterm.toLowerCase()+"&type="+category;
+    var path_get = "search_admin" //Cambiar por la ruta donde haremos la peticion get
+    var requestdir = path_get +"?key="+searchterm.toLowerCase()+"&type="+category; //Enviamos el texto busqueda y la categoria
     console.log(requestdir);
     xhttp.open("GET", requestdir, true);
     xhttp.send();
