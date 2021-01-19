@@ -119,6 +119,10 @@ body {
 	background-color: black;
 }
 
+.error-bd{
+	display: none;
+}
+
 @media (max-width: 480px) {
 	.search-form{
 		flex-direction: column;
