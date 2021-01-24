@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registro album</title>
+</head>
+
+<body>
+    <div class="container registro">
+        <form action="guardarcancion" method="POST" enctype="multipart/form-data">
+            <h4>Información sobre el album</h4>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="nombrealbum">Nombre del album</label>
+                <input type="text" id="nombrealbum" class="form-control" name="nombrealbum" />
+            </div>
+            <div class="form-group mb-4">
+                <label for="fecha_lanzamiento">Fecha de lanzamiento</label>
+                <div class="form-group-input">
+                    <input type="date" name="fecha_lanzamiento" id="fecha_lanzamiento" class="form-control" />
+                    <i class="fas fa-times form-valid-edo"></i>
+                </div>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="pistas">Numero de pistas</label>
+                <input type="number" id="pistas" class="form-control" name="pistas" />
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="banda">Artista/Banda</label>
+                <input type="text" id="banda" class="form-control" name="banda" />
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="estudio">Estudio de grabacion</label>
+                <input type="text" id="estudio" class="form-control" name="estudio" />
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="portada">Portada</label>
+                <input type="file" class="form-control form-control-lg" id="portada" name="portada" />
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="contraportada">Contraportada</label>
+                <input type="file" class="form-control form-control-lg" id="contraportada" name="contraportada"/>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

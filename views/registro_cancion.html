@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registro cancion</title>
+</head>
+<body>
+    <div class="container registro">
+        <form action="guardarcancion" method="POST">
+            <h4>Información sobre la canción</h4>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="nombrecancion">Nombre de la cancion</label>
+                <input type="text" id="nombrecancion" class="form-control" name="nombrecancion"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="compositor">Compositor</label>
+                <input type="text" id="compositor" class="form-control" name="compositor"/>
+            </div>
+            <div class="form-group mb-4">
+                <label for="fecha_lanzamiento">Fecha de lanzamiento</label>
+                <div class="form-group-input">
+                  <input type="date" name="fecha_lanzamiento" id="fecha_lanzamiento" class="form-control" />
+                  <i class="fas fa-times form-valid-edo"></i>
+                </div>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="album">Album</label>
+                <input type="text" id="album" class="form-control" name="album"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="duracion">Duracion</label>
+                <input type="text" id="duracion" class="form-control" name="duracion"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="observaciones">Observaciones</label>
+                <textarea type="text" id="observaciones" class="form-control" name="observaciones" rows="3"></textarea>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="invitados">Invitados (separados por enter)</label>
+                <textarea type="text" id="invitados" class="form-control" name="invitados" rows="5"></textarea>
+            </div>
+
+            <h4>Información sobre la tablatura</h4>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="tablatura_url">URL</label>
+                <input type="text" id="tablatura_url" class="form-control" name="tablatura_url"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="compositor">Compositor</label>
+                <input type="text" id="compositor" class="form-control" name="compositor"/>
+            </div>
+            <div class="form-group mb-4">
+                <label for="fecha_tablatura">Fecha</label>
+                <div class="form-group-input">
+                  <input type="date" name="fecha_tablatura" id="fecha_tablatura" class="form-control" />
+                  <i class="fas fa-times form-valid-edo"></i>
+                </div>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="traductor">Traductor</label>
+                <input type="text" id="traductor" class="form-control" name="traductor"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="email_traductor">Email del traductor</label>
+                <input type="email" id="email_traductor" class="form-control" name="email_traductor"/>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

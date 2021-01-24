@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registro artista</title>
+</head>
+
+<body>
+    <div class="container registro">
+        <form action="guardarcancion" method="POST" enctype="multipart/form-data">
+            <h4>Información sobre el artista</h4>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input type="text" id="nombre" class="form-control" name="nombre" />
+            </div>
+            <div class="form-group mb-4">
+                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                <div class="form-group-input">
+                    <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control" />
+                    <i class="fas fa-times form-valid-edo"></i>
+                </div>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="ciudad">Ciudad de nacimiento</label>
+                <input type="text" id="ciudad" class="form-control" name="ciudad" />
+            </div>
+            <div class="form-group" id="group-sexo">
+                <label for="sexo" class="form-label"> Genero </label>
+                <br />
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="femenino" value="femenino" checked />
+                  <label class="form-check-label" for="femenino">
+                    Femenino
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="sexo" id="masculino" value="masculino" />
+                  <label class="form-check-label" for="masculino">
+                    Masculino
+                  </label>
+                </div>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="web">Sitio web</label>
+                <input type="url" id="web" class="form-control" name="web"/>
+            </div>
+            <div class="mb-4 form-group">
+                <label class="form-label" for="biografia">Biografía</label>
+                <textarea type="text" id="biografia" class="form-control" name="biografia" rows="5"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
