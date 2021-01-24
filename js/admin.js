@@ -14,7 +14,7 @@ function deleteSong(index, type, name_search, artist) {
     $("#deleteModal").modal();
 }
 
-//Para borrar elementos
+//Para borrar canciones, musicos, banda, etc
 function commitDelete(index, type) {
     console.log("Borrando dato con index = "+index+ " y tipo= "+ type);
     var elem = {
@@ -34,9 +34,9 @@ function commitDelete(index, type) {
         contentType: 'application/json',
         success: function (resp) {
             if(resp.success){
-                //COSA SI TODO VA BIEN
+                console.log("OK");
             }else{
-                //COSA SI VA MAL
+                console.log("ERROR");
             }
         },
         data: todelete
@@ -61,7 +61,7 @@ function searchAdmin(event) {
             }
             for (let result of results) {
                 var a_box = document.createElement('a');
-                a_box.setAttribute('href', '/show_info_admin.html?key=' + result.id + '&category=' + result.type.toLowerCase());
+                a_box.setAttribute('href', '../views/show_info.html?key=' + result.id + '&category=' + result.type.toLowerCase());
                 a_box.setAttribute('class', 'result-link');
 
                 var div_cont = document.createElement('div');
@@ -79,9 +79,17 @@ function searchAdmin(event) {
                 var p_category = document.createElement('p');
                 p_category.setAttribute('class', 'entry-description');
                 p_category.innerText = result.type;
-
+                
+                var categoria = result.type.toLowerCase();
+                var ruta;
+                if(categoria=="artist") ruta= "update_artista.html";
+                if(categoria=="album") ruta= "update_album.html";
+                if(categoria=="band") ruta= "update_banda.html";
+                if(categoria=="song") ruta= "update_cancion.html";
+                if(categoria=="musico") ruta= "update_musico.html";
+                if(categoria=="estudio") ruta= "update_estudio.html";                if(categoria=="banda") ruta= "update_banda.html";
                 var a_edit = document.createElement('a');
-                a_edit.setAttribute('href', '/edit_info_admin.html?key=' + result.id + '&category=' + result.type.toLowerCase());
+                a_edit.setAttribute('href', '../views/'+ ruta + '?key=' + result.id);
                 a_edit.innerText = "Editar";
                 a_edit.setAttribute('class', 'btn_edit');
 
@@ -113,7 +121,7 @@ function searchAdmin(event) {
     var path_get = "search_admin" //Cambiar por la ruta donde haremos la peticion get
     var requestdir = path_get + "?key=" + searchterm.toLowerCase() + "&type=" + category; //Enviamos el texto busqueda y la categoria
     console.log(requestdir);
-    xhttp.open("GET", "../test/response.json", true);
+    xhttp.open("GET", '../test/response.json', true);
     xhttp.send();
 }
 
@@ -130,6 +138,8 @@ function deleteUser(index, name_user) {
     $("#deleteModal").modal();
 }
 
+
+//Para eliminar usuarios admin/locutor
 function commitDeleteUser(index) {
     var user = {
         id: index
@@ -147,9 +157,9 @@ function commitDeleteUser(index) {
         contentType: 'application/json',
         success: function (resp) {
             if(resp.success){
-                //COSA SI TODO VA BIEN
+                console.log("OK");
             }else{
-                //COSA SI VA MAL
+                console.log("ERROR");
             }
         },
         data: todelete
