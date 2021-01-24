@@ -153,12 +153,13 @@
 }
 .inputs_register{
     width: 60%;
-    height: 48%;
+    height: 70%;
     position: relative;
     left: 30%;
-    bottom: 48%;
+    bottom: 60%;
     transition: 0.5s;
 }
+
 .inputfield{
     width: 100%;
     padding: 2% 0;
@@ -177,3 +178,16 @@
 }
 
 
+  .role-c{
+      color: white;
+      font-family: pier-sans-bold;
+      font-size: large;
+  }
+
+  .role-c label{
+    font-family: pier-sans-light;
+  }
+
+  .role-c input{
+      margin-top: 10px;
+  }

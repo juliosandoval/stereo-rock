@@ -1,25 +1,48 @@
 <html>
-    <head>
-        <title>Register</title>
-        <link rel="stylesheet" href="../css/login.css">
-    </head>
-    <body>
-        <div class="login_class">
-            <div class="box">
-                <div class="img_logo"></div>
-                <form id="Register" class="inputs_register" action="">
-                    <input type="text" class="inputfield" name="username" id="username" placeholder="Username" required>
-                    <input type="email" class="inputfield" name="email" id="email" placeholder="Email" required>
-                    <input type="password" class="inputfield" name="password" id="password" placeholder="Password" required>
-                    <button type="submit" class="submit_button">Register</button>
-                </form>
-                <!--<div class="Register">
+
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="login_class">
+        <div class="box">
+            <div class="img_logo"></div>
+            <form id="Register" class="inputs_register" action="" method="POST">
+                <input type="text" class="inputfield" name="name" id="name" placeholder="Name" required />
+                <input type="text" class="inputfield" name="last_name" id="last_name" placeholder="Last name"
+                    required />
+                <input type="text" class="inputfield" name="username" id="username" placeholder="Username" required />
+                <input type="email" class="inputfield" name="email" id="email" placeholder="Email" required />
+                <input type="password" class="inputfield" name="password" id="password" placeholder="Password"
+                    required />
+                
+                <div class="role-c">
+                    <p>Role</p>
+                    <br>
+                    <input type="radio" id="admin" name="role" value="admin" />
+                    <label for="admin">Administrador</label><br />
+                    <input type="radio" id="locutor" name="role" value="locutor" />
+                    <label for="locutor">Locutor</label>
+                    <br />
+                </div>
+
+                <button type="submit" class="submit_button">Register</button>
+            </form>
+            <!--<div class="Register">
                     <a href="login.html">
                         <button type="submit" class="submit_button">Log in</button>
                     </a>
                 </div>-->
-                <div class="foot">2020 Proyecto Análisis y Diseño Orientado a Objetos</div>
+            <br />
+            <br />
+            <div class="foot">
+                2020 Proyecto Análisis y Diseño Orientado a Objetos
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

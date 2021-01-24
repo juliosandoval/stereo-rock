@@ -96,11 +96,13 @@ body {
 	font-weight: bold;
 	margin-bottom: 10px;
 	font-size: 30px;
+	color: black;
 }
 
 .entry-description{
 	font-weight: 300;
 	font-size: 20px;
+	color: black;
 }
 
 .btn_edit, .btn_delete{
