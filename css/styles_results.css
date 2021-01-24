@@ -84,6 +84,7 @@ body {
 	flex-direction: column;
 	border-radius: 10px;
 	padding: 30px 50px; 	
+	text-decoration: none;
 }
 
 .result-link {

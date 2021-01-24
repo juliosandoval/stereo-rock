@@ -16,7 +16,7 @@ function Search(event){
             }
             for(let result of results) {
                 var a_box = document.createElement('a');
-                a_box.setAttribute('href', '/show_info.html?key='+result.id+'&category='+result.type.toLowerCase());
+                a_box.setAttribute('href', '../views/show_info.html?key='+result.id+'&category='+result.type.toLowerCase());
                 a_box.setAttribute('class', 'result-link');
                 
                 var div_cont = document.createElement('div');
@@ -55,6 +55,6 @@ function Search(event){
     var path_get = "search" //Cambiar por la ruta donde haremos la peticion get
     var requestdir = path_get +"?key="+searchterm.toLowerCase()+"&type="+category;
     console.log(requestdir);
-    xhttp.open("GET", requestdir, true);
+    xhttp.open("GET", '../test/response.json', true);
     xhttp.send();
 }

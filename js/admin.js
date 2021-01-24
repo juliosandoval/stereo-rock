@@ -29,7 +29,7 @@ function commitDelete(index, type) {
 
     $.ajax({
         url: 'ruta', //Cambiar
-        type: 'get',
+        type: 'post',
         dataType: 'json',
         contentType: 'application/json',
         success: function (resp) {
@@ -115,4 +115,43 @@ function searchAdmin(event) {
     console.log(requestdir);
     xhttp.open("GET", "../test/response.json", true);
     xhttp.send();
+}
+
+function deleteUser(index, name_user) {
+
+    var title = name_user;
+
+    var pos = document.getElementById("detalles_user");
+    pos.innerHTML = '';
+    var nodo = document.createTextNode(title.toUpperCase());
+    pos.appendChild(nodo);
+    var btn_delete = document.getElementById("dodelete");
+    btn_delete.setAttribute('onclick', 'commitDeleteUser('+index+')');
+    $("#deleteModal").modal();
+}
+
+function commitDeleteUser(index) {
+    var user = {
+        id: index
+    };
+
+    var todelete = JSON.stringify(user);
+    console.log(todelete);
+
+    //PETICION AJAX
+
+    $.ajax({
+        url: 'ruta', //Cambiar
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function (resp) {
+            if(resp.success){
+                //COSA SI TODO VA BIEN
+            }else{
+                //COSA SI VA MAL
+            }
+        },
+        data: todelete
+    });
 }

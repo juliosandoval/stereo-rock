@@ -1,0 +1,45 @@
+.titulo{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.info{
+    width: 80%;
+    margin: auto;
+}
+
+.dato{
+    background-color: white;
+    display: flex;
+    justify-content: center;;
+    border-radius: 10px;
+    width: 100%;
+    padding: 15px;
+    color: black;
+    margin-bottom: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.dato h4{
+    margin: 0;
+    padding: 0;
+}
+
+.album-portada{
+    width: 250px;
+    margin: auto;
+}
+
+.nombre{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+
+.nombre a{
+    text-decoration: none;
+    font-size: 18px;
+    color: tomato;
+}
