@@ -18,12 +18,14 @@
         integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
     <script src="../js/admin.js"></script>
+    <script src="../js/users.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/styles_results.css" />
 </head>
 
 <body>
+
     <div class="searchSection">
         <form class="search-form">
             <input class="searchText" type="search" name="searchText" id="searchText" placeholder="Buscar" required />
@@ -42,17 +44,25 @@
             Poner rol
             Cambiar href cambiando idUser
             Cambiar deleteUser mandando el id  y el nombre
-        
-        --> 
-        <div class="result">
+            <div class="result">
             <h2 class="entry-title">Nombre usuario</h2>
+            <h3 class="entry-title">Nombre usuario</h3>
             <p class="entry-description">Locutor</p>
             <a href="/edit_info_user.html?key=iduser" class="btn_edit">Editar</a>
             <a onclick='deleteUser(1, "Juanito")' href="#" class="btn_delete">Eliminar</a>
         </div>
+        --> 
+
+        
+
+        
 
 
     </div>
+
+    <script type="text/javascript">
+        mostrarUsers();
+    </script>
 
     <div class="container">
         <!-- Modal -->
