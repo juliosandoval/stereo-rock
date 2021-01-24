@@ -1,0 +1,8 @@
+{
+    "nombre": "Nombre",
+    "genero": "Masculino",
+    "fechaNacimiento": "yyyy-MM-dd",
+    "cdNacimiento": "Ciudad",
+    "biografia": "Texto de la biografia",
+    "web": "url"
+}

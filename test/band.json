@@ -1,0 +1,7 @@
+{
+    "nombre": "Nombre banda",
+    "anio": "yyyy",
+    "ciudad": "Ciudad creacion",
+    "influencias": ["Nombre 1", "Nombre 2"],
+    "artistas": ["Nombre 1", "Nombre 2"]
+}

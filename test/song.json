@@ -1,0 +1,13 @@
+{
+    "nombre": "Nombre cancion",
+    "compositor": "Nombre banda/artista",
+    "fechaLanzamiento": "yyyy-MM-dd",
+    "duracion": 300,
+    "observaciones": "Texto observacion",
+    "invitados": ["Nombre 1", "Nombre 2"],
+    "tablatura_url": "url",
+    "tablatura_compositor": "Nombre",
+    "tablatura_fecha": "yyyy-MM-dd",
+    "tablatura_traductor": "Nombre",
+    "tablatura_email": "email"
+}
